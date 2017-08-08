@@ -1,3 +1,5 @@
+<p align="center"><img src="https://snaacky.me/sapphire_logo.png" width="150" height="150"/></p>
+
 # Sapphire
 A trigger bot for CS:GO written in Python.
 
