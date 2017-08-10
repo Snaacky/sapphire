@@ -1,3 +1,4 @@
 pymem
 keyboard
+mouse
 #pywin32api
