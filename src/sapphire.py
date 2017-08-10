@@ -1,5 +1,7 @@
 import keyboard
+import mouse
 import pymem
+import time
 from config import *
 
 pm = pymem.Pymem("csgo.exe")
@@ -18,7 +20,9 @@ def main():
 
         if keyboard.is_pressed(aim_key):
             if result > 0 and result <= 64:
-                keyboard.press_and_release(attack_key)
+                mouse.press()
+                time.sleep(0.05)
+                mouse.release()
 
 
 if __name__ == '__main__':
