@@ -10,5 +10,4 @@ Sapphire comes as is with no guarentees regarding VAC status. This is a cheat an
 * [Python 3.x](https://www.python.org/)
 * [Pymem](https://github.com/srounet/Pymem)
 * [keyboard](https://github.com/boppreh/keyboard)
-* [mouse](https://github.com/boppreh/mouse)
 * [pywin32](https://sourceforge.net/projects/pywin32/files/?source=navbar)
