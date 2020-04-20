@@ -23,9 +23,6 @@ def main():
         if GetWindowText(GetForegroundWindow()) == "Counter-Strike: Global Offensive":
             player = pm.read_int(client + dwLocalPlayer)
 
-            if not keyboard.is_pressed(trigger_key):
-                time.sleep(0.1)
-
             if keyboard.is_pressed(trigger_key):
                 entity_id = pm.read_int(player + m_iCrosshairId)
                 entity = pm.read_int(client + dwEntityList + (entity_id - 1) * 0x10)
@@ -37,6 +34,9 @@ def main():
                     pm.write_int(client + dwForceAttack, 6)
 
                 time.sleep(0.006)
+
+        if not keyboard.is_pressed(trigger_key):
+            time.sleep(0.1)
 
 
 if __name__ == '__main__':
