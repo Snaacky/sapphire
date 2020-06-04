@@ -4,9 +4,9 @@ import pymem.process
 import time
 from win32gui import GetWindowText, GetForegroundWindow
 
-dwEntityList = (0x4D43AB4)
-dwForceAttack = (0x3175088)
-dwLocalPlayer = (0xD2FB84)
+dwEntityList = (0x4D4B104)
+dwForceAttack = (0x317C6EC)
+dwLocalPlayer = (0xD36B94)
 m_fFlags = (0x104)
 m_iCrosshairId = (0xB3D4)
 m_iTeamNum = (0xF4)
@@ -17,7 +17,7 @@ trigger_key = "shift"
 def main():
     print("Sapphire has launched.")
     pm = pymem.Pymem("csgo.exe")
-    client = pymem.process.module_from_name(pm.process_handle, "client_panorama.dll").lpBaseOfDll
+    client = pymem.process.module_from_name(pm.process_handle, "client.dll").lpBaseOfDll
 
     while True:
         if not keyboard.is_pressed(trigger_key):
