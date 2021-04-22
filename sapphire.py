@@ -1,15 +1,20 @@
-import keyboard
+import json
 import pymem
-import pymem.process
-import time
+import keyboard
+import http.client
 from win32gui import GetWindowText, GetForegroundWindow
 
-dwEntityList = (0x4D4B104)
-dwForceAttack = (0x317C6EC)
-dwLocalPlayer = (0xD36B94)
-m_fFlags = (0x104)
-m_iCrosshairId = (0xB3D4)
-m_iTeamNum = (0xF4)
+conn = http.client.HTTPSConnection("raw.githubusercontent.com")
+conn.request("GET", "/frk1/hazedumper/master/csgo.json")
+values = json.loads(conn.getresponse().read().decode('utf-8'))
+conn.close()
+
+dwEntityList = values['signatures']['dwEntityList']
+dwForceAttack = values['signatures']['dwForceAttack']
+dwLocalPlayer = values['signatures']['dwClientState'] + values['signatures']['dwClientState_GetLocalPlayer'] # check docs for more info
+m_fFlags = values['netvars']['m_fFlags']
+m_iCrossHairID = values['netvars']['m_iCrosshairId']
+m_iTeamNum = values['netvars']['m_iTeamNum']
 
 trigger_key = "shift"
 
