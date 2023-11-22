@@ -7,12 +7,19 @@ Trigger bot for CS:GO.
 git clone https://github.com/Snaacky/Sapphire.git
 ```
 
-2. Install the prerequisites
+2. Change the directory
+```
+cd C:\Users\"Your User"\Sapphire
+```
+
+3. Install the prerequisites
 ```
 pip install -r requirements.txt
 ```
 
-3. Execute the script in a terminal with elevated privileges 
+
+
+4. Execute the script in a terminal with elevated privileges 
 ```
 python sapphire.py
 ```
